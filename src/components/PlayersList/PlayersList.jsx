@@ -1,20 +1,6 @@
-import React, { useState } from "react";
 import PlayersItem from "./PlayerItem/PlayersItem";
-import playersList from "../../state/playersList";
 
-export function PlayersList() {
-  const [players, setPlayers] = useState(playersList);
-  const addPlayer = () => {
-    const newPlayer = {
-      name: "New Player",
-      sex: "Male",
-      level: 1,
-      force: 100,
-      color: "blue",
-    };
-    setPlayers([...players, newPlayer]);
-  };
-
+export function PlayersList({ addPlayer, players }) {
   return (
     <div className="container">
       <div className="players">
