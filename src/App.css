@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+ul {
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+} */
+
+.container {
+  max-width: 1200px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 0 42px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__buttons {
+  display: flex;
+}
+
+.header__button button {
+  border-radius: 30px;
+  margin: 4px;
+}
+
+.header__button img {
+  height: 20px;
+  width: 20px;
+}
+
+.players {
+  min-width: 500px;
+  min-height: 500px;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.players__list {}
+
+.players__add-button {
+  float: right;
+  margin-right: 38px;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.player__avatar {
+  width: 42px;
+  height: 42px;
+  color: aliceblue;
+  background-color: green;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.players__add-button {
+  background-color: blue;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: aliceblue;
+  border: none;
+  font-size: 29px;
 }
