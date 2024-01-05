@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -11,24 +16,34 @@ ul {
 
 .container {
   max-width: 1200px;
+  padding: 8px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   padding: 0 30px 0 42px;
+  margin: 30px 20px;
+  align-items: center;
+}
+
+.header__logo {
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .header__buttons {
   display: flex;
 }
 
-.header__button button {
+.button {
   border-radius: 30px;
   margin: 4px;
+  height: 36px;
+  width: 36px;
 }
 
-.header__button img {
+.button img {
   height: 20px;
   width: 20px;
 }
@@ -37,10 +52,14 @@ ul {
   min-width: 500px;
   min-height: 500px;
   grid-template-rows: 1fr 1fr;
-
+  margin: 30px 20px;
 }
 
 .players__list {}
+
+.players__column-name {
+  font-weight: bold;
+}
 
 .players__add-button {
   float: right;
@@ -59,12 +78,14 @@ ul {
   width: 42px;
   height: 42px;
   color: aliceblue;
-  background-color: green;
+  background-color: orange;
   border-radius: 50%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: center; /* выравнивание по горизонтали */
+  align-items: center; /* выравнивание по вертикали */
 }
 
 .players__add-button {
@@ -75,4 +96,24 @@ ul {
   color: aliceblue;
   border: none;
   font-size: 29px;
+}
+
+.new-munchkin {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.new-munchkin__legend{
+  margin-left: 30px;
+  font-size: 25px;
+}
+
+.new-munchkin__inputs {
+  display: grid;
+  gap: 8px;
+}
+
+.new-munchkin__input span{
+  margin-bottom: 10px;
 }

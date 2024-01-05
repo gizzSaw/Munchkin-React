@@ -1,28 +1,23 @@
 import React from "react";
+import { RestartButton } from "../Buttons/RestartButton/RestartButton";
+import { DiceButton } from "../Buttons/DiceButton/DiceButton";
+import { SettingsButton } from "../Buttons/SettingsButton/SettingsButton";
 
-export function Header({ clearPlayers, players }) {
-  console.log("players", players);
-
+export function Header({ clearPlayers }) {
   return (
     <>
       <div className="container">
         <header className="header">
-          <h1 className="header__logo">Munchkins</h1>
+          <h1 className="header__logo">Munchkin - Level Counter</h1>
           <ul className="header__buttons">
-            <li className="header__button">
-              <button className="header__button_restart" onClick={clearPlayers}>
-                <img src="icons/restart.jpg" alt="" />
-              </button>
+            <li>
+              <RestartButton clearPlayers={clearPlayers} />
             </li>
-            <li className="header__button">
-              <button className="header__button_dice">
-                <img src="icons/dice.jpg" alt="" />
-              </button>
+            <li>
+              <DiceButton />
             </li>
-            <li className="header__button">
-              <button className="header__button_settings">
-                <img src="icons/settings.jpg" alt="" />
-              </button>
+            <li>
+              <SettingsButton />
             </li>
           </ul>
         </header>
