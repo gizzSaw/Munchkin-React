@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { BackButton } from "../components/Buttons/BackButton/BackButton";
 import { ConfirmButton } from "../components/Buttons/ConfirmButton/ConfirmButton";
 import maleLogo from "../assets/icons/male.jpg";
 import femaleLogo from "../assets/icons/female.jpg";
 
 export default function NewMunchkin({ addPlayer }) {
+  const [name, setName] = useState("Sa");
+  const [gender, setGender] = useState("Male");
+
   const handleChange = (event) => {
-    const gender = event.target.value;
-    console.log(gender);
+    setName(document.querySelector(".new-munchkin__input_name input")?.value);
+    setGender(event.target.value);
   };
 
   return (
@@ -15,14 +18,14 @@ export default function NewMunchkin({ addPlayer }) {
       <header className="header header__new-munchkin ">
         <BackButton />
         <h1 className="header__logo">New Munchkin</h1>
-        <ConfirmButton addPlayer={addPlayer} />
+        <ConfirmButton addPlayer={addPlayer} name={name} gender={gender} />
       </header>
       <fieldset className="new-munchkin">
         <legend className="new-munchkin__legend">Чечик</legend>
         <ul className="new-munchkin__inputs">
           <li className="new-munchkin__input new-munchkin__input_name">
             <span>Имя: </span>
-            <input type="text" />
+            <input type="text" onChange={handleChange} />
           </li>
           <li className="new-munchkin__input new-munchkin__input_gender">
             <span>Пол: </span>

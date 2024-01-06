@@ -1,21 +1,21 @@
 let playersList = [
     {
         name: "Saveliy",
-        sex: "Man",
+        gender: "Man",
         level: 1,
         force: 1,
         color: "red"
     },
     {
         name: "Lena",
-        sex: "Female",
+        gender: "Female",
         level: 1,
         force: 1,
         color: "grey"
     },
     {
         name: "Nikita",
-        sex: "Man",
+        gender: "Man",
         level: 100,
         force: 100,
         color: "black"
@@ -23,21 +23,21 @@ let playersList = [
     },
     {
         name: "Egor",
-        sex: "Man",
+        gender: "Man",
         level: 1,
         force: 1,
         color: "pink"
     },
     {
         name: "Masha",
-        sex: "Female",
+        gender: "Female",
         level: 1,
         force: 1,
         color: "green"
     },
     {
         name: "Pasha",
-        sex: "Man",
+        gender: "Man",
         level: 100,
         force: 100,
         color: "red"
@@ -59,7 +59,7 @@ export default playersList
 //         <li class="player">
 //         <div class="player__avatar" style="background-color: ${item.color};">${item.name.slice(0,1)}</div>
 //         <div class="player__name">${item.name}</div>
-//         <div class="player__sex">${item.sex}</div>
+//         <div class="player__gender">${item.gender}</div>
 //         <div class="player__level">${item.level}</div>
 //         <div class="player__force">${item.force}</div>
 //         </li>

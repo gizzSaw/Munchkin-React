@@ -11,17 +11,20 @@ function App() {
 
   //пока что вымышленный игрок
   //потом нужно будет написать форму для добавления нового игрока
-  const addPlayer = () => {
-    console.log(document.querySelector(".new-munchkin__input_gender input"));
+  const addPlayer = (name, gender) => {
+    //console.log(document.querySelector(".new-munchkin__input_gender input"));
+
+    const isNameCorrect = "false"; //провалидировать имя
 
     const newPlayer = {
-      name: "New Player",
-      sex: "Male",
+      name: name ? name : "Unknown Looser",
+      gender: gender ? gender : "Unknown gender",
       level: 1,
       force: 1,
       color: "orange",
     };
 
+    //пользуясь хуком, добавляем в массив
     setPlayers([...players, newPlayer]);
     players.push(newPlayer);
   };

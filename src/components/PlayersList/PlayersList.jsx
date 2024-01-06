@@ -17,7 +17,7 @@ export function PlayersList({ addPlayer, players }) {
               <PlayersItem
                 key={Math.random()}
                 name={item.name}
-                sex={item.sex}
+                gender={item.gender}
                 level={item.level}
                 force={item.force}
                 color={item.color}
@@ -25,7 +25,7 @@ export function PlayersList({ addPlayer, players }) {
             );
           })}
         </ul>
-        <button className="players__add-button" onClick={addPlayer}>
+        <button className="players__add-button" onClick={() => addPlayer()}>
           +
         </button>
       </div>
