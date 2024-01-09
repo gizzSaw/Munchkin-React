@@ -3,7 +3,7 @@ import { RestartButton } from "../Buttons/RestartButton/RestartButton";
 import { DiceButton } from "../Buttons/DiceButton/DiceButton";
 import { SettingsButton } from "../Buttons/SettingsButton/SettingsButton";
 
-export function Header({ clearPlayers }) {
+export function Header({ setPlayers, players }) {
   return (
     <>
       <div className="container">
@@ -11,7 +11,7 @@ export function Header({ clearPlayers }) {
           <h1 className="header__logo">Munchkin - Level Counter</h1>
           <ul className="header__buttons">
             <li>
-              <RestartButton clearPlayers={clearPlayers} />
+              <RestartButton setPlayers={setPlayers} players={players} />
             </li>
             <li>
               <DiceButton />

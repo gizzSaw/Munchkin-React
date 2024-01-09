@@ -1,18 +1,12 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box; */
 }
 
 ul {
   list-style: none;
 }
-
-/* .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
 
 .container {
   max-width: 1200px;
@@ -37,7 +31,7 @@ ul {
 }
 
 .button {
-  border-radius: 30px;
+  border-radius: 50%;
   margin: 4px;
   height: 36px;
   width: 36px;
@@ -112,8 +106,11 @@ ul {
 .new-munchkin__inputs {
   display: grid;
   gap: 8px;
+  padding: 8px;
 }
 
 .new-munchkin__input span{
+  display: grid;
+  gap: 8px;
   margin-bottom: 10px;
 }

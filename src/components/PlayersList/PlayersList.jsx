@@ -1,6 +1,6 @@
 import PlayersItem from "./PlayerItem/PlayersItem";
 
-export function PlayersList({ addPlayer, players }) {
+export function PlayersList({ players }) {
   return (
     <div className="container">
       <div className="players">
@@ -25,9 +25,7 @@ export function PlayersList({ addPlayer, players }) {
             );
           })}
         </ul>
-        <button className="players__add-button" onClick={() => addPlayer()}>
-          +
-        </button>
+        <button className="players__add-button">+</button>
       </div>
     </div>
   );

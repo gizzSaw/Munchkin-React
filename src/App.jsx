@@ -9,38 +9,15 @@ function App() {
   // следим за массивом игроков
   const [players, setPlayers] = useState(playersList);
 
-  //пока что вымышленный игрок
-  //потом нужно будет написать форму для добавления нового игрока
-  const addPlayer = (name, gender) => {
-    //console.log(document.querySelector(".new-munchkin__input_gender input"));
-
-    const isNameCorrect = "false"; //провалидировать имя
-
-    const newPlayer = {
-      name: name ? name : "Unknown Looser",
-      gender: gender ? gender : "Unknown gender",
-      level: 1,
-      force: 1,
-      color: "orange",
-    };
-
-    //пользуясь хуком, добавляем в массив
-    setPlayers([...players, newPlayer]);
-    players.push(newPlayer);
-  };
-
-  const clearPlayers = () => {
-    console.log("clearPlayers", players);
-    setPlayers([]);
-  };
-
   return (
     <div className="App">
-      <NewMunchkin addPlayer={addPlayer} />
-      <Header clearPlayers={clearPlayers} players={players} />
-      <PlayersList addPlayer={addPlayer} players={players} />
+      <NewMunchkin setPlayers={setPlayers} players={players} />
+      <Header setPlayers={setPlayers} players={players} />
+      <PlayersList players={players} />
     </div>
   );
 }
 
 export default App;
+
+//PlayersList добавить функцию открытия окна нью-манчкин
