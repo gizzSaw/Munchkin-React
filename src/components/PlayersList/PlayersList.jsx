@@ -1,4 +1,5 @@
 import PlayersItem from "./PlayerItem/PlayersItem";
+import { Form } from "react-router-dom";
 
 export function PlayersList({ players }) {
   return (
@@ -25,7 +26,9 @@ export function PlayersList({ players }) {
             );
           })}
         </ul>
-        <button className="players__add-button">+</button>
+        <Form action="new">
+          <button className="players__add-button">+</button>
+        </Form>
       </div>
     </div>
   );
