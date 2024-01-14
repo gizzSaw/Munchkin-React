@@ -3,6 +3,8 @@ import { BackButton } from "../components/Buttons/BackButton/BackButton";
 import { ConfirmButton } from "../components/Buttons/ConfirmButton/ConfirmButton";
 import maleLogo from "../assets/icons/male.jpg";
 import femaleLogo from "../assets/icons/female.jpg";
+import { Form } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 export default function NewMunchkin({ setPlayers, players }) {
   const [name, setName] = useState("Sa");
@@ -14,8 +16,12 @@ export default function NewMunchkin({ setPlayers, players }) {
     const isNameCorrect = "false"; //провалидировать имя
 
     const newPlayer = {
-      name: name ? name : "Unknown Looser",
-      gender: gender ? gender : "Unknown gender",
+      name: name
+        ? name.slice(0, 1).toUpperCase() + name.slice(1)
+        : "Unknown Looser",
+      gender: gender
+        ? gender.slice(0, 1).toUpperCase() + gender.slice(1)
+        : "Unknown gender",
       level: 1,
       force: 1,
       color: "orange",
@@ -36,14 +42,19 @@ export default function NewMunchkin({ setPlayers, players }) {
   return (
     <div className="container">
       <header className="header header__new-munchkin ">
-        <BackButton />
+        <Link to="/">
+          <BackButton />
+        </Link>
+
         <h1 className="header__logo">New Munchkin</h1>
-        <ConfirmButton
-          addPlayer={addPlayer}
-          name={name}
-          gender={gender}
-          players={players}
-        />
+        <Link to={`/`}>
+          <ConfirmButton
+            addPlayer={addPlayer}
+            name={name}
+            gender={gender}
+            players={players}
+          />{" "}
+        </Link>
       </header>
       <fieldset className="new-munchkin">
         <legend className="new-munchkin__legend">Чечик</legend>
