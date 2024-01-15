@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function PlayersAvatar({ name, color }) {
   return (
     <div className="player__avatar" style={{ backgroundColor: color }}>

@@ -7,8 +7,8 @@ import { Form } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
 
 export default function NewMunchkin({ setPlayers, players }) {
-  const [name, setName] = useState("Sa");
-  const [gender, setGender] = useState("Male");
+  const [name, setName] = useState("Unknown Looser");
+  const [gender, setGender] = useState("Unknown gender");
 
   const addPlayer = (name, gender) => {
     //console.log(document.querySelector(".new-munchkin__input_gender input"));

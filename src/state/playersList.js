@@ -2,71 +2,51 @@ let playersList = [
     {
         name: "Saveliy",
         gender: "Man",
-        level: 1,
-        force: 1,
-        color: "red"
+        level: 4,
+        force: 10,
+        color: "red",
+        active: false
     },
     {
         name: "Lena",
         gender: "Female",
-        level: 1,
-        force: 1,
-        color: "grey"
+        level: 7,
+        force: 16,
+        color: "grey",
+        active: false
     },
     {
         name: "Nikita",
         gender: "Man",
-        level: 100,
-        force: 100,
-        color: "black"
-
+        level: 8,
+        force: 45,
+        color: "black",
+        active: false
     },
     {
         name: "Egor",
         gender: "Man",
-        level: 1,
-        force: 1,
-        color: "pink"
+        level: 2,
+        force: 4,
+        color: "pink",
+        active: false
     },
     {
         name: "Masha",
         gender: "Female",
-        level: 1,
-        force: 1,
-        color: "green"
+        level: 4,
+        force: 5,
+        color: "green",
+        active: false
     },
     {
         name: "Pasha",
         gender: "Man",
-        level: 100,
-        force: 100,
-        color: "red"
+        level: 9,
+        force: 9,
+        color: "red",
+        active: false
     },
 ]
 
-
 export default playersList
-
-// const addButton = document.querySelector('.players__add-button')
-// const playersListElement = document.querySelector('.players__list')
-
-// addButton.addEventListener('click', addPlayer)
-
-
-// playersList.map((item) => {
-//     playersListElement.innerHTML += 
-//     `
-//         <li class="player">
-//         <div class="player__avatar" style="background-color: ${item.color};">${item.name.slice(0,1)}</div>
-//         <div class="player__name">${item.name}</div>
-//         <div class="player__gender">${item.gender}</div>
-//         <div class="player__level">${item.level}</div>
-//         <div class="player__force">${item.force}</div>
-//         </li>
-//     `
-// })
-
-
-// function addPlayer() {
-
-// }

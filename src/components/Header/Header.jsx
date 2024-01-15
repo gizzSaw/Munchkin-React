@@ -1,4 +1,3 @@
-import React from "react";
 import { RestartButton } from "../Buttons/RestartButton/RestartButton";
 import { DiceButton } from "../Buttons/DiceButton/DiceButton";
 import { SettingsButton } from "../Buttons/SettingsButton/SettingsButton";
