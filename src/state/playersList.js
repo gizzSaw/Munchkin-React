@@ -16,7 +16,7 @@ let playersList = [
         active: false
     },
     {
-        name: "Nikita",
+        name: "Samson",
         gender: "Man",
         level: 8,
         force: 45,
@@ -24,7 +24,7 @@ let playersList = [
         active: false
     },
     {
-        name: "Egor",
+        name: "40in Pivan",
         gender: "Man",
         level: 2,
         force: 4,
@@ -32,7 +32,7 @@ let playersList = [
         active: false
     },
     {
-        name: "Masha",
+        name: "Lina",
         gender: "Female",
         level: 4,
         force: 5,
@@ -40,7 +40,7 @@ let playersList = [
         active: false
     },
     {
-        name: "Pasha",
+        name: "Melkiy",
         gender: "Man",
         level: 9,
         force: 9,

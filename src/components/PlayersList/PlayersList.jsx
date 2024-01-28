@@ -49,18 +49,13 @@ export function PlayersList({ players, setPlayers }) {
       setActive(isUserActive());
       console.log("не совпало", active, players);
     }
-    //console.log("active", active);
-    //console.log(targetPlayer);
   }
 
   return (
     <div className="container">
       {active && (
         <>
-          <PlayersCard />
-          <h2>{findActivePlayer().name}</h2>
-          <p>Уровень {findActivePlayer().level}</p>
-          <p>Сила {findActivePlayer().force}</p>
+          <PlayersCard findActivePlayer={findActivePlayer} />
         </>
       )}
 
